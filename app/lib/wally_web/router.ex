@@ -17,7 +17,7 @@ defmodule WallyWeb.Router do
   scope "/", WallyWeb do
     pipe_through :browser
 
-    get "/", EventsController, :index
+    get "/", IndexController, :index
   end
 
   # Other scopes may use custom stacks.
