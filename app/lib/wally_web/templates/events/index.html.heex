@@ -1,0 +1,10 @@
+<h1> DrawIT </h1>
+
+<h2> Currently looking for players: </h2>
+<%= if @events == [] do %>
+    <h3> No games are planned right now, would you like to add one? </h3>
+<% else %>
+    <%= for event <- @events do %>
+        <h3><%= event.game %></h3>
+    <% end %>
+<% end %>
