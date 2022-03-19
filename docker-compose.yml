@@ -2,6 +2,8 @@ version: "3.9"
 services:
   web:
     build: app
+    volumes: 
+      - ./app:/app
     ports:
       - "8000:4000"
     depends_on:
