@@ -3,7 +3,11 @@ services:
   web:
     build: app
     volumes: 
-      - ./app:/app
+      - ./app/lib:/app/lib
+      - ./app/priv:/app/priv
+      - ./app/config:/app/config
+      - ./app/assets:/app/assets
+      - ./app/test:/app/test
     ports:
       - "8000:4000"
     depends_on:

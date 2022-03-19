@@ -14,6 +14,7 @@ RUN mix do local.hex --force, local.rebar --force
 COPY mix.* ./
 RUN mix deps.get
 RUN mix deps.compile
+RUN mix tailwind.install
 
 COPY . .
 
